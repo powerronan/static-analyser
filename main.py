@@ -5,7 +5,8 @@ def main():
     lines = parse_file("tests/test.py")
     variableName = find_unused_variables(lines)
 
-    print(variableName)
+    for unused in variableName:
+        print(unused)
     
 
 if __name__ == "__main__":
