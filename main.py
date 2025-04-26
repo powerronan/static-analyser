@@ -1,0 +1,1 @@
+from analyser.parser import parse_file
