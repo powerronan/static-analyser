@@ -21,6 +21,8 @@ class unused_variable_analyser(ast.NodeVisitor):
             self.used.add(node.id)
         self.generic_visit(node)
 
+        
+
 
 def find_unused_variables(code_text):
     tree = ast.parse(code_text)
