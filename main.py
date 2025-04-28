@@ -7,11 +7,11 @@ def main():
     variableName = find_unused_variables(lines)
     functionUnused = find_unused_functions(lines)
 
-    for unused in variableName:
-        print(unused)
+    for var_name, lineNo in variableName.items():
+        print(f"Variable: '{var_name}' at line number '{lineNo}' is not used.")
     
-    for unused in functionUnused:
-        print(unused)
+    for func_name, lineNo in functionUnused.items():
+        print(f"Function: '{func_name}' at line number '{lineNo}' is not used.")
     
 
 if __name__ == "__main__":
